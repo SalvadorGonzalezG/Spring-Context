@@ -23,30 +23,4 @@ public class MindStone extends Stone{
         // Business Logic
         System.out.print("Mind control in stone" + super.toString());
      }
-
-     public MindStone getPrototype(){
-        try(
-                // Convert Object into bytes
-                final var bos = new ByteArrayOutputStream();
-                final var oos = new ObjectOutputStream(bos);
-                ) {
-                // Serialize (clone) object
-                oos.writeObject(this);
-                oos.flush();
-            try(
-                    // deseariz
-                    final var bis = new ByteArrayInputStream(bos.toByteArray());
-                    final var ois = new ObjectInputStream(bis);
-                    ) {
-                // Cast
-                return (MindStone) ois.readObject();
-        }
-        }catch (IOException | ClassNotFoundException e)
-
-    {
-        log.warning("Cant cas or read class");
-        throw new RuntimeException(e.getMessage());
-        }
-     }
-
 }

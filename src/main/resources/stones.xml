@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here (Stones of infinity) -->
+    <bean id="mind" class="org.example.models.MindStone" scope="prototype"/>
+    <bean id="power" class="org.example.models.PowerStone" scope="prototype"/>
+    <bean id="reality" class="org.example.models.RealityStone" scope="prototype"/>
+    <bean id="soul" class="org.example.models.SoulStone" scope="prototype"/>
+    <bean id="space" class="org.example.models.SpaceStone" scope="protorype"/>
+    <bean id="time" class="org.example.models.TimeStone" scope="prototype"/>
+
+</beans>
